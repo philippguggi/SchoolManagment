@@ -3,11 +3,11 @@ package com.PhilippGuggi.SchoolManagement;
 public class Student {
 	private int id;
 	private String name;
-	private int grade;
+	private double grade;
 	private int	feesPaid;
 	private int feesTotal;
 	
-	public Student(int id, String name, int grade) {
+	public Student(int id, String name, double grade) {
 		this.feesPaid = 0;
 		this.feesTotal = 30000;
 		this.id = id;
@@ -17,9 +17,10 @@ public class Student {
 	
 	public void payFees(int fees) {
 		feesPaid += fees;
+		// School.updateTotalMoneySpent(feesPaid);
 	}
 	
-	public void setGrade(int grade) {
+	public void setGrade(double grade) {
 		this.grade = grade;
 	}
 	
@@ -31,7 +32,7 @@ public class Student {
 		return name;
 	}
 	
-	public int getGrade() {
+	public double getGrade() {
 		return grade;
 	}
 	
