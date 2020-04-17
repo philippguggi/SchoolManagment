@@ -17,7 +17,7 @@ public class Student {
 	
 	public void payFees(int fees) {
 		feesPaid += fees;
-		// School.updateTotalMoneySpent(feesPaid);
+		School.updateTotalMoneySpent(feesPaid);
 	}
 	
 	public void setGrade(double grade) {

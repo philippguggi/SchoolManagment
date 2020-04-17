@@ -31,7 +31,7 @@ public class Teacher {
 	
 	public void receiveSalary(double salary) {
 		salaryEarned += salary;
-		// School.updateTotalMoneySpent(salary);
+		School.updateTotalMoneySpent(salary);
 	}
 	
 	@Override
