@@ -7,12 +7,14 @@ public class School {
 	private List<Student> students;
 	private static double totalMoneyEarned;
 	private static double totalMoneySpent;
+	private static double balance;
 	
 	public School(List<Teacher> teacher, List<Student>student) {
 		this.teachers = teachers;
 		this.students = students;
 		totalMoneyEarned = 0;
 		totalMoneySpent = 0;
+		balance = 0;
 	}
 
 	public List<Teacher> getTeachers() {
@@ -45,5 +47,10 @@ public class School {
 
 	public static void updateTotalMoneySpent(double MoneySpent) {
 		totalMoneySpent -= MoneySpent;
+	}
+
+	public double getBalance() {
+		balance = totalMoneyEarned + totalMoneySpent;
+		return balance;
 	}
 }
